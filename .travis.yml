@@ -1,0 +1,13 @@
+language: ruby
+rvm: 2.4.5
+sudo: true
+before_install:
+- gem install bundler:2.1.4
+- bundle install
+script:
+- asciidoctor index.adoc -o index.html
+after_success:
+- sudo ./deploy.sh
+env:
+  global:
+  - secure: gMTfapDJeLyQ79TqB1h2vewMZfJnXykwDgjvOnMt5cf2699SvHQAmosS2hmDb3NZwe4ygVhHyZ0vrQjymUjmBPBdb0OYVtbo6C2T/aNc9WjaZEmlgoq1BJ+noamXayaO9/rf44Y8raVfz5/cJXXzAIZd9dBj0GvAi9KyazY5XrY7a+rtkx61/8L/bT25rRVMYS7tAMrwSSFXKvtItHRGX6wlZ2ar/WWgkhbcSyNhPs/6DGpteAHi1ot3Jj5JTVrnZtzQRQa9AfLlV6CKqF/1N+CcQyhvLtOVBSxlAdnHmfCnhqBjwOoRbI7jTnRObg7WXW53GaaMd4/8Yspd1TSpw0S9ctl1zSJHu478w+a5hS6SuZtuarCX4bguMWG1XHwrBFCwTVlt+mTdrzgibMBWbBHlsUoDpXzboTLIqPBXoAZxPgz99RAoQcORzSSBpWT67AzKi4fkIalKvcdnd/jhnyo4vlfwU5ziIxtIPgULdE26TZ/I+tbbB9a/oN6fg7N43+zs5FBZCAYdA22eaT93qFFEO+JAOcARh8jU1VUIaOa4PFnmSgwYmV8PvggkxxRhUfU0mJ+GiiQvtCtiA9qiqszJMsbwD3e4SN9PSO3rsOGAsqnu0be5jQY4ej1nnPN266xMm3hXxHvk9Juk/w8uDx8w8ZDvSVZb6xwulPNkupg=
