@@ -1,0 +1,12 @@
+language: ruby
+rvm: 2.4.5
+before_install:
+- gem install bundler:2.1.4
+- bundle install
+script:
+- asciidoctor README.adoc -o index.html
+after_success:
+- ./deploy.sh
+env:
+  global:
+  - secure: u5jz8AhdgcOFdD2makntELeFPK6G4WSHYmUeR1MjQCAAxzSJ5YanDlC2K4WZ5kWX6zlCl5YKyrNt0aUeiLSaGgPD5bZmBp/YivCILuzN2AMwW3QQgYyBDAaxlwlTGPWjYT/N+z74L1J9u8bTK3T0Tl3pM++XnPgG8UFVJ9Q7+aqP4Gme0JV8Cr2An0T1SEfWDVivywMMagIF/3WittFrS13ZhdJSGvvB7EI1HbHKHfrxEpxWWVkIFVkVvcCTRymjU+MVhR5GcIvTJYq+ealnZEFshTUjwoqlpFBj6dbl67/lvsnUoi2KCWeV9H+lF1HP7X0XZzEmk0ErMU/xyRdgFXxEuDmBKKWENzof2jdfLzui9Op08Ns/jhKbQgT5MK3xtKRPZ9o8pn810DMUojKzrMKcbLvFhU8D2Wb+7w31AHWBwd6dkBizRs4uz3xcTucbCLjMxO7Uwz1+TMXDtHK4DNFWbFEH217kmdsIAMn78lad7tBAJV8cZcfFXkXwbi0YzdWX+En8Bo15uQhjXTFR8g6mmI2n4m4dCcEGuKx/+xuXgauiQ/LKMOXD9zfEWaq2fFY1IqwoqkbBJ0PLLLOiADmQkR421Jbj7LxIZ7bAfkv8nTnxuklLCMrgTrqs7AqzeITmpi7xiYgYo3ymLNozOT1vf/s0JR1ZjR/8yFPWxBk=
